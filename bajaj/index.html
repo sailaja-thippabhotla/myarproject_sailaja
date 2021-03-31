@@ -1,0 +1,220 @@
+
+
+
+
+
+<!doctype html>
+<html class="supports-no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#eb4f47">
+  
+<div class="main-content" data-drawer-push>
+    <div class="main-content__wrapper">
+      <main class="content-for-layout" id="MainContent" role="main">
+        <style>
+ 
+ div#shopify-section-header {
+    display: none;
+ }
+  div#shopify-section-footer {
+    display: none;
+ }
+
+  .sketchfab-embed-wrapper iframe{
+    	margin:0px;
+    	padding:0px;
+    	position:relative;
+		width: 100%;
+        height: 100vh;
+    	z-index:1;
+	}
+  
+
+  
+    
+@media only screen and (max-width: 900px) {
+
+ 
+</style>
+</head>
+<body>
+
+<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.7.1.js"></script>
+
+
+<div class="sketchfab-embed-wrapper">
+    <iframe is="x-frame-bypass" id="model" title="A 3D model" width="640" height="480" src="" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+
+<script type="text/javascript">
+
+
+var iframe = document.getElementById('api-frame');
+console.log("iframe :" + iframe);
+// var urlParams = new URLSearchParams(window.location.href);
+// let urlStr = urlParams.toString();
+// console.log("url :" + urlStr);
+
+// let modelNameParam = urlParams.get('modelname');
+// const modelName = modelNameParam.toString();
+// console.log("model name : " + modelName);
+let modelName = new URLSearchParams(window.location.search);
+
+let myParam = modelName.get('modelname');
+
+let indexRef;
+let uid = "";
+const urlPrefix = "https://sketchfab.com/models/";
+const urlPostfix = "/embed?autostart=1&amp;ui_hint=0&amp;ui_controls=0&amp;ui_infos=0&amp;ui_inspector=0&amp;ui_stop=0&amp;ui_watermark=0&amp;ui_watermark_link=0";
+
+var finalUrl = "";
+
+// let bool = urlStr.includes("bajaj");
+// console.log(bool);
+
+// if(urlStr.includes("pulsar125n"))
+// {
+//   uid = "2d5fb70329f7432ca2030b91c3289612";
+// }
+// if(urlStr.includes("pulsar150ny"))
+// {
+//   uid = "371c9c7a005d4adb9664f22d12f6a858";
+// }
+// if(urlStr.includes("pulsar180BO"))
+// {
+//   uid = "2a373364f50c4dfa91ccb8d6623624e7";
+// }
+// if(urlStr.includes("pulsar220BB"))
+// {
+//   uid = "88bad57219494189921eccac10a25170";
+// }
+// if(urlStr.includes("pulsarNS200BR"))
+// {
+//   uid = "702bcf7e148540f9945b9290aeb3a4e3";
+// }
+// if(urlStr.includes("pulsarNS160"))
+// {
+//   uid = "f27703efe56a42c6aabe6249bcc53730";
+// }
+// if(urlStr.includes("platina"))
+// {
+//   uid = "36cd00e2ac604113bfd4634d0ade3a23";
+// }
+// if(urlStr.includes("platinaDrum"))
+// {
+//   uid = "80500a3a82b44054a91ecc7329d2c9c8";
+// }
+// if(urlStr.includes("pulsarRS200BR"))
+// {
+//   uid = "7c348813198f42769fbc8a573fa3ef86";
+// }
+// if(urlStr.includes("ktm250adv"))
+// {
+//   uid = "50ebd75434fc422f9d164b0a7aa55352";
+// }
+// if(urlStr.includes("bajajCT100"))
+// {
+//   uid = "48fb4fdff97c46c286799d3c4ef953e5";
+// }
+// if(urlStr.includes("husqvarnaVitpilen"))
+// {
+//   uid = "7baf105a78534a6ebcd030083ac2c404";
+// }
+// if(urlStr.includes("husqvarnaSvartpilen250"))
+// {
+//   uid = "2f0515772e2b4f94948b6262bbf753bf";
+// }
+// if(urlStr.includes("bajajDominor"))
+// {
+//   uid = "c310de7dc3e24d45a5b3eb38337014e5";
+// }
+// if(urlStr.includes("ktmDuke250"))
+// {
+//   uid = "81f29ed5d46d4ca29d4f9fd4c32a421b";
+// }
+
+if(myParam == "pulsar125n")
+{
+  uid = "2d5fb70329f7432ca2030b91c3289612";
+}
+if(myParam == "pulsar150ny")
+{
+  uid = "371c9c7a005d4adb9664f22d12f6a858";
+}
+if(myParam == "pulsar180bo")
+{
+  uid = "2a373364f50c4dfa91ccb8d6623624e7";
+}
+if(myParam == "pulsar220bb")
+{
+  uid = "88bad57219494189921eccac10a25170";
+}
+if(myParam == "pulsarns200br")
+{
+  uid = "702bcf7e148540f9945b9290aeb3a4e3";
+}
+if(myParam == "pulsarns160")
+{
+  uid = "01cdaa02708d4ad1a5e00c10d933a58d";
+}
+if(myParam == "platina")
+{
+  uid = "36cd00e2ac604113bfd4634d0ade3a23";
+}
+if(myParam == "platinadrum")
+{
+  uid = "80500a3a82b44054a91ecc7329d2c9c8";
+}
+if(myParam == "pulsarrs200br")
+{
+  uid = "7c348813198f42769fbc8a573fa3ef86";
+}
+if(myParam == "ktm250adv")
+{
+  uid = "50ebd75434fc422f9d164b0a7aa55352";
+}
+if(myParam == "bajajct100")
+{
+  uid = "48fb4fdff97c46c286799d3c4ef953e5";
+}
+if(myParam == "husqvarnavitpilen")
+{
+  uid = "7baf105a78534a6ebcd030083ac2c404";
+}
+if(myParam == "husqvarnasvartpilen250")
+{
+  uid = "2f0515772e2b4f94948b6262bbf753bf";
+}
+if(myParam == "bajajdominar250")
+{
+  uid = "c310de7dc3e24d45a5b3eb38337014e5";
+}
+
+if(myParam == "bajajdominar400")
+{
+  uid = "10b511594f714eb38cc483cd9be85fd9";
+}
+if(myParam == "ktmduke250")
+{
+  uid = "81f29ed5d46d4ca29d4f9fd4c32a421b";
+}
+
+// if(urlStr.includes("Kajaj"))
+// {
+//   uid = "2d5fb70329f7432ca2030b91c3289612";
+// }
+// if(bool)
+// {
+  //view the model
+// }
+
+finalUrl = urlPrefix + uid + urlPostfix;
+console.log(finalUrl);
+document.getElementById("model").src = finalUrl;
+</script>
+
+
+</body>
+</html>
